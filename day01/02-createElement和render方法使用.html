@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="app"></div>
+</body>
+<script src="./node_modules/react/umd/react.development.js"></script>
+<script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+<script>
+    console.log(React);
+    console.log(ReactDOM);
+    // <h1 id="123">子节点</h1>
+    // createElement方法
+    // 第一个参数 创建元素
+    // 第二参数 元素上面有的属性
+    // 第三个参数 子节点
+    const title = React.createElement("h1",{
+        id:"123"
+    },"子节点")
+    // render
+    // 函数第一个参数是渲染的元素
+    // 函数第二参数是挂载点 document.getElementById("app")
+    ReactDOM.render(title,document.getElementById("app"));
+</script>
+</html>
